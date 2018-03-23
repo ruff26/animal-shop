@@ -39,6 +39,7 @@
                             ['label' => 'Categories', 'icon' => 'file-o', 'url' => ['/shop/category/index'], 'active' => $this->context->id == 'shop/category'],
                             ['label' => 'Characteristics', 'icon' => 'file-o', 'url' => ['/shop/characteristic/index'], 'active' => $this->context->id == 'shop/characteristic'],
                             ['label' => 'Delivery Methods', 'icon' => 'file-o', 'url' => ['/shop/delivery/index'], 'active' => $this->context->id == 'shop/delivery'],
+                            ['label' => 'Upload', 'icon' => 'file-o', 'url' => ['/shop/upload/index'], 'active' => $this->context->id == 'shop/upload'],
                         ]],
                         ['label' => 'Blog', 'icon' => 'folder', 'items' => [
                             ['label' => 'Posts', 'icon' => 'file-o', 'url' => ['/blog/post/index'], 'active' => $this->context->id == 'blog/post'],

@@ -34,6 +34,13 @@ class RoleController extends Controller
         $this->stdout('Done!' . PHP_EOL);
     }
 
+//    public function actionAddAdmin()
+//    {
+//        $user = $this->findModel('admin');
+//        $this->service->assignRole($user->id, 'admin');
+//
+//    }
+
     private function findModel($username): User
     {
         if (!$model = User::findOne(['username' => $username])) {

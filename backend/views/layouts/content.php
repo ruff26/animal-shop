@@ -36,7 +36,7 @@ use dmstr\widgets\Alert;
 </div>
 
 <footer class="main-footer">
-    <div class="pull-right hidden-xs">
+    <div class="pull-right hidden-xs">w
         <b>Version</b> 2.0
     </div>
     <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
@@ -57,7 +57,7 @@ use dmstr\widgets\Alert;
             <h3 class="control-sidebar-heading">Recent Activity</h3>
             <ul class='control-sidebar-menu'>
                 <li>
-                    <a href='javascript::;'>
+                    <a href='javascript::;'>w
                         <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
                         <div class="menu-info">

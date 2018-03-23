@@ -1,0 +1,36 @@
+web:
+  build: ./Docker/nginx
+  ports:
+    - "8080:8080"
+    - "80:80"
+  volumes:
+    - .:/var/www/html
+    - ./Docker/nginx/conf/nginx.conf:/etc/nginx/conf.d/site.conf
+  links:
+    - php-fpm
+php-fpm:
+  build: ./Docker/php-fpm
+  volumes:
+    - .:/var/www/html
+    - ./Docker/php-fpm/conf/php.ini:/usr/local/etc/php/conf.d/site.ini
+  links:
+    - mysql
+    - elasticsearch
+    - redis
+mysql:
+  image: mysql:latest
+  environment:
+    MYSQL_DATABASE: shop
+    MYSQL_USER: root
+    MYSQL_PASSWORD:
+    MYSQL_ROOT_PASSWORD: root
+  volumes:
+    - /var/docker/mysql/shop-data:/var/lib/mysql
+  ports:
+    - '3306:3306'
+elasticsearch:
+  image: elasticsearch
+  volumes:
+    - /var/docker/elasticsearch/shop-data:/usr/share/elasticsearch/data
+redis:
+  image: redis:latest

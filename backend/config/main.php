@@ -12,6 +12,7 @@ return [
     'aliases' => [
         '@staticRoot' => $params['staticPath'],
         '@static'   => $params['staticHostInfo'],
+        '@uploadsPath' => $params['uploadsPath'],
     ],
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => [

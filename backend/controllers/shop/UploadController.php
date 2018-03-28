@@ -22,7 +22,7 @@ class UploadController extends Controller
         $form = new UploadForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
-                $this->service->uploadCsvFile($form);
+                $this->service->updateProducts($form);
                 return $this->redirect(['index']);
             } catch (\DomainException $e) {
                 Yii::$app->errorHandler->logException($e);

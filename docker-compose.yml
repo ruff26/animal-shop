@@ -34,3 +34,9 @@ elasticsearch:
     - /var/docker/elasticsearch/shop-data:/usr/share/elasticsearch/data
 redis:
   image: redis:latest
+admin:
+  image: phpmyadmin/phpmyadmin
+  ports:
+    - 8001:80
+  links:
+    - mysql:db

@@ -55,6 +55,9 @@ class Product extends ActiveRecord implements AggregateRoot
     const STATUS_DRAFT = 0;
     const STATUS_ACTIVE = 1;
 
+    const LUKAS_N_PROVIDER = 0;
+    const OTHER_PROVIDER = 1;
+
     public $meta;
 
     public static function create($brandId, $categoryId, $code, $name, $description, $weight, $quantity, Meta $meta): self
@@ -123,6 +126,13 @@ class Product extends ActiveRecord implements AggregateRoot
         return $this->status == self::STATUS_ACTIVE;
     }
 
+    public static function getProviders()
+    {
+        return [
+            self::LUKAS_N_PROVIDER => 'Lukas-N',
+            self::OTHER_PROVIDER => 'other_1',
+        ];
+    }
 
     public function isDraft(): bool
     {

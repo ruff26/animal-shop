@@ -22,8 +22,8 @@ class UploadController extends Controller
         $form = new UploadForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
-                $this->service->updateProducts($form);
-                return $this->redirect(['index']);
+                $this->service->upload($form);
+                return $this->redirect(['shop/product/index']);
             } catch (\DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());

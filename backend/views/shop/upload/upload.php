@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = 'Upload';
     <div class="box box-default">
         <div class="box-header with-border">Upload pruducts from Csv:</div>
         <div class="box-body">
-            <?= $form->field($model, 'updateItems')->checkboxList($model->updateItems) ?>
+            <?= $form->field($model, 'providers')->radioList($model->getProductProviders()) ?>
             <?= $form->field($model, 'csvFile')->widget(FileInput::class) ?>
         </div>
     </div>
